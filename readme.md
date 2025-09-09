@@ -1,56 +1,60 @@
-SL&AM Dashboard Go Application
-This is a simple web server application written in Go that serves a static HTML, CSS, and JavaScript dashboard. The application is designed to simulate a Software License & Asset Management (SL&AM) dashboard, providing a front-end interface for various modules. All the front-end code is self-contained within a single Go file, making it easy to deploy and run.
+A comprehensive Software License & Asset Management (SL&AM) system in Go with the following features:
+🔑 Authentication & Access Control
 
-Features
-Login Page: A basic login interface with a hardcoded access group check.
+Role-based access with 4 user groups: Administrator, License Manager, Asset Analyst, Viewer
+Session management with secure cookie handling
+Default admin account: username admin, password admin123
 
-Responsive Dashboard: A clean, responsive dashboard layout built with Tailwind CSS.
+🏗️ Database Structure (SQLite with modernc.org/sqlite)
 
-Module Navigation: Links to various modules, including:
+Users, licenses, assets, events, risk register, FOI requests
+Session management for security
+Sample data pre-populated for demo
 
-Asset Register
+📊 Core Dashboard Features
 
-Compliance Audits
+Current month overview with license statistics
+Event calendar showing renewals, expiries, audits
+Quick action navigation to all modules
 
-License Renewals
+🎯 Main Functional Areas
+1. Calendar View
 
-Risk Register
+Events, renewals, and expiry tracking for current month
+Color-coded priorities (Critical, High, Medium)
+Ready for full calendar integration
 
-Report Execution
+2. Risk Register
 
-Freedom of Information Requests (FOI)
+Risk assessment with probability/impact analysis
+Color-coded risk levels
+Mitigation tracking and ownership
 
-Placeholder Pages: Each module link leads to a placeholder page, indicating future development.
+3. FOI Request Management
 
-Login Details
-To access the dashboard, you must enter the correct user access group on the login page. The hardcoded value for this prototype is:
+Request tracking with due dates
+Status management (Received, Processing, Completed)
+Assignment capabilities
 
-SL&AM Team
+4. Report Execution
 
-You will not be able to proceed to the dashboard without entering this exact text.
+Placeholder structure for 6 report types
+License compliance, cost analysis, asset inventory
+Risk assessment and audit trail reports
 
-Prerequisites
-You need to have Go installed on your system to run this application. You can download and install it from the official Go website.
+5. Placeholder Modules
 
-How to Run
-Make sure you have a file named main.go with the provided code.
+Settings, License Management, Asset Management
+Ready for additional code modules to be added later
 
-Open your terminal or command prompt.
+🚀 To Run:
 
-Navigate to the directory where main.go is located.
+Install dependencies:
+BaSH:
+go mod init slam-system
+go get modernc.org/sqlite
+go get golang.org/x/crypto/bcrypt
 
-Run the application using the following command:
-
+Run the application:
 go run main.go
 
-
-Once the server is running, open your web browser and go to http://localhost:8080 to access the dashboard.
-
-Future Enhancements
-The current modules are placeholders. Future development could include:
-
-Implementing a persistent database for asset and license data.
-
-Building out the functionality for each module, such as asset search and filtering, automated audit tools, and report generation.
-
-Adding user authentication and more robust access control.
