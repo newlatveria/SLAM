@@ -1,9 +1,6 @@
 
-# Setup Go mod
-go mod init slamdash0.go
-
-# Install SQLite3 for Go.
+go mod init slam-system
 go get modernc.org/sqlite
+go get golang.org/x/crypto/bcrypt
 
-# Complete setup 
-go mod tidy
+go run main.go
