@@ -1,0 +1,7 @@
+
+Require a go application to perform Software Licence & Asset management tasks.
+please create an interface to login with a relevant user access group, with modernc.org/sqlite for data handling, to then
+see the relevant information, calendar of events/renewals/expiries/etc, for the current month, a risk register, Report Execution, Freedom of Information Requests, a settings icon and other useful options for the SL&AM team members with the options past the first
+page being placeholders for additional code modules to be created later please?
+
+
